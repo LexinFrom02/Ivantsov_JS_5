@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivantsov_js-5.7</title>
+
+    <script>
+        {
+            "use strict";
+
+            function getDateProperties(milliseconds) {
+                let date = new Date(milliseconds);
+                let currentYear = date.getFullYear(),
+                    currentMonthNum = date.getMonth(),
+                    currentDayNum = date.getDay();
+                    currentDate = date.getDate(),
+                    currentHour = date.getHours(),
+                    currentMinute = date.getMinutes();
+
+
+                switch (currentMonthNum) {
+                    case 1:
+                        currentMonth = 'January';
+                        break;
+                    case 2:
+                        currentMonth = 'February';
+                        break;
+                    case 3:
+                        currentMonth = 'March';
+                        break;
+                    case 4:
+                        currentMonth = 'April';
+                        break;
+                    case 5:
+                        currentMonth = 'May';
+                        break;
+                    case 6:
+                        currentMonth = 'June';
+                        break;
+                    case 7:
+                        currentMonth = 'July';
+                        break;
+                    case 8:
+                        currentMonth = 'August';
+                        break;
+                    case 9:
+                        currentMonth = 'September';
+                        break;
+                    case 10:
+                        currentMonth = 'October';
+                        break;
+                    case 11:
+                        currentMonth = 'November';
+                        break;
+                    case 12:
+                        currentMonth = 'December';
+                        break;
+
+                }
+
+                switch (currentDayNum) {
+                    case 0:
+                        currentDay = 'Sunday';
+                        break;
+                    case 1:
+                        currentDay = 'Monday';
+                        break;
+                    case 2:
+                        currentDay = 'Tuesday';
+                        break;
+                    case 3:
+                        currentDay = 'Wednesday';
+                        break;
+                    case 4:
+                        currentDay = 'Thursday';
+                        break;
+                    case 5:
+                        currentDay = 'Friday';
+                        break;
+                    case 6:
+                        currentDay = 'Saturday';
+                        break;
+                }
+                let returnDate = { Year: currentYear, Month: currentMonth, DayOfWeek: currentDay, Day: currentDate, Time: currentHour + ':' + currentMinute };
+                console.log(returnDate);
+            }
+
+            getDateProperties(1597863546545);
+        }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+
+</html>
